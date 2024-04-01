@@ -1,0 +1,13 @@
+<div class="w-full h-full flex flex-col justify-center items-center">
+
+    <section class="w-full h-full grid grid-cols-3 gap-4 max-w-7xl">
+
+        @for (plan of plans; track plan.plan) {
+        <app-pricing-card class="col-span-1" plan="{{plan.plan}}" description="{{plan.description}}"
+            price="{{plan.price}}" buttonText="{{plan.buttonText}}" [features]="plan.features"
+            [isFeatured]="plan.isFeatured" />
+        }
+
+    </section>
+
+</div>

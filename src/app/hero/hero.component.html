@@ -1,0 +1,45 @@
+<div class="w-full h-screen flex flex-col justify-center items-center overflow-hidden">
+    <div
+        class="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#00c480_100%)]">
+    </div>
+
+    <div
+        class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#f5f5f5_1px,transparent_1px),linear-gradient(to_bottom,#f5f5f5_1px,transparent_1px)] bg-[size:2rem_2rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]">
+    </div>
+
+    <section class="w-full h-full flex flex-col gap-8 justify-center items-center max-w-5xl z-10">
+        <h1 class="text-7xl font-semibold text-center text-neutral-800">
+            Start a
+            <span class="text-transparent bg-gradient-to-tr from-green-500 to-green-600 bg-clip-text">
+                Business
+            </span>
+            <br>With Knowledge
+        </h1>
+
+        <p class="text-lg text-center max-w-lg">
+            Build High-Performing and highly engaged teams, and quickly increase business productivity.
+        </p>
+
+        <button class="px-6 py-2 bg-neutral-800 text-neutral-50 font-medium rounded-full">
+            Try it Free
+        </button>
+    </section>
+
+    <div class="w-full h-auto flex gap-0 justify-center items-center absolute overflow-hidden bottom-0 -z-10 pt-12">
+        @for(card of cards; track card.imageUrl) {
+        <app-hero-cards imageUrl={{card.imageUrl}} class='{{card.class}}' />
+        }
+    </div>
+
+    <section class="w-full h-auto flex flex-col gap-4 justify-center items-center bg-white overflow-hidden py-8">
+        <p class="text-neutral-400 z-10">
+            Trusted by
+        </p>
+        <div class="w-full h-auto flex justify-center items-center gap-8 max-w-5xl">
+            @for(logo of logos; track logo.alt){
+            <img src={{logo.url}} alt="{{logo.alt}}" class="size-8 opacity-50" />
+            }
+        </div>
+    </section>
+
+</div>

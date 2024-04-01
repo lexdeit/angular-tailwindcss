@@ -1,0 +1,54 @@
+<div class="w-full h-full flex flex-col gap-12 justify-center items-center">
+
+
+    <div
+        class="w-full h-full flex flex-col gap-12 justify-center items-center max-w-7xl p-12 border border-neutral-50 rounded-xl relative overflow-hidden shadow-sm">
+
+        <div
+            class="absolute bottom-0 left-[-20%] right-0 top-0 h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(0,196,128,.5),rgba(255,255,255,0))]">
+
+        </div>
+
+        <div
+            class="absolute bottom-0 left-[50%] right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(244,252,3,.2),rgba(255,255,255,0))]">
+
+        </div>
+
+
+        <div
+            class="absolute bottom-0 left-[20%] right-0 top-[-100%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(3,144,252,.3),rgba(255,255,255,0))]">
+
+        </div>
+
+
+
+        <section class="flex flex-col justify-center items-center max-w-7xl z-10">
+
+            <div class="flex flex-col gap-6 justify-center items-center">
+
+                <div
+                    class="flex justify-center items-center bg-white px-4 py-1 border border-neutral-50 shadow-sm rounded-full">
+                    <span class="text-xs text-neutral-900 font-medium text-center">Testimonials</span>
+                </div>
+
+                <h3
+                    class="text-5xl font-semibold text-center max-w-xl bg-gradient-to-r from-yellow-500 via-blue-500 to-green-500 text-transparent bg-clip-text">
+                    Public Cheer for Us!
+                </h3>
+
+                <p class="text-lg">
+                    Find out how our users are spreading the world!
+                </p>
+            </div>
+
+        </section>
+
+        <section class="w-full h-full grid grid-cols-3 gap-4 max-w-7xl z-20">
+            @for (testimonial of testimonials; track testimonial.username){
+            <app-testimonial-card username="{{testimonial.username}}" name="{{testimonial.name}}"
+                comment="{{testimonial.comment}}" userProfileImage="{{testimonial.userProfileImage}}" />
+            }
+        </section>
+
+    </div>
+</div>

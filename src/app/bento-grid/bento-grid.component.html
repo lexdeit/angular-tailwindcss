@@ -1,0 +1,24 @@
+<div class="w-full h-full flex flex-col gap-12 justify-center items-center">
+
+    <div class="w-full h-full flex flex-col gap-12 justify-center items-center max-w-7xl">
+        <section class="w-full h-full max-w-5xl flex flex-col justify-center items-center gap-4">
+            <h2
+                class="text-5xl font-semibold text-center max-w-xl bg-gradient-to-r from-yellow-500 via-blue-500 to-green-500 text-transparent bg-clip-text">
+                Empower Your Business With Our Solutions
+            </h2>
+
+            <p class="max-w-sm text-neutral-400 text-lg text-center font-medium">
+                Discover how our specialized services can elevate your business to new heights
+            </p>
+        </section>
+
+        <section class="w-full h-full grid grid-cols-12 gap-4">
+            @for(grid of grids; track grid.title) {
+            <app-bento-card class="{{grid.position}}" title={{grid.title}} description={{grid.description}}
+                imageUrl={{grid.imageUrl}} />
+            }
+
+        </section>
+    </div>
+
+</div>
